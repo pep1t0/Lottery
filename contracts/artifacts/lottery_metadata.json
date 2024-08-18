@@ -396,6 +396,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "generateWinner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -881,11 +888,11 @@
 			]
 		},
 		"contracts/lottery.sol": {
-			"keccak256": "0xb4ee9c1f8fa1ac73730b966ce7e0935ecc0fb27c2630d77922f7ccda9caf4c38",
+			"keccak256": "0x13579e28e267282dccdfe70c4ba538d027f04f221c7c564f4e37222dcd0f36b3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://47a8088957ce2b01225146a473e8152b94ab77efe2c4e5bc6f55fe123333e38c",
-				"dweb:/ipfs/QmcvMxgo78aeFpFE5djGrxiYYDSmJnp438LybH8Q8xKFXi"
+				"bzz-raw://6ab49f268013c5aed475c3d50266f21e9480f8dc6b2c356ce78d04e4858166f8",
+				"dweb:/ipfs/QmQwEYcnUQZkTxiuZ9okQ8Fxm76YXcwDomPXWs4w46H49y"
 			]
 		}
 	},

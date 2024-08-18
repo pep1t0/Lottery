@@ -122,6 +122,20 @@ contract lottery is ERC20, Ownable (msg.sender) {
         require(address(this).balance > 0, "No ethers to withdraw");
         _to.transfer(address(this).balance);
     }
+
+    // Generacion del ganador de la loteria
+    function generateWinner() public onlyOwner {
+        uint totalTicketsPurchased = ticketsPurchased.length;
+        require(totalTicketsPurchased > 0, "There are not tickets bought");
+        uint random = uint(uint(keccak256(abi.encodePacked(block.timestamp))) % totalTicketsPurchased);
+        uint selection = ticketsPurchased[random];
+        winner = ADNTicket[selection];
+
+        //  Enviar ethers a los ganadores de la loteria  (GANADOR) Se envia un  95% de premio
+        payable(winner).transfer(address(this).balance * 95 / 100); // Envio ethers al ganador de la loteria (GANADOR)  
+        //  Enviar ethers al propietario del contrato (organizzador de la loteria) Se envia un 5% de premio
+        payable(owner()).transfer(address(this).balance * 5 / 100); // Envio ethers al ganador de la loteria (GANADOR)
+    }
 }
 
 
